@@ -1,3 +1,9 @@
+/**
+ * Simulates a Problem
+ * @author Jakin Ng and Taerim Eom
+ * @version 12.5.2018
+ */
+// ask Deppe about equals/toString
 public class Problem 
 {
 	int answer; //the answer to the problem 
@@ -45,7 +51,36 @@ public class Problem
 	 * Sets question to the parameter question
 	 * @param question The new question that the question PIV is being set to
 	 */
-	public void setQuestion(String question) {
+	public void setQuestion(String question) 
+	{
 		this.question = question;
+	}
+	
+	/**
+	 * Returns whether or not the questions and answers of both Problems are equal
+	 * @param problem
+	 * @return Whether the two problems are equivalent
+	 */
+	public boolean equals(Problem problem)
+	{
+		// checks if answer and question are equal
+		if (answer == problem.getAnswer() && question.equals(problem.getQuestion()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * Returns this Problem in String form: both the question and the answer
+	 * @return This Problem in String form
+	 */
+	public String toString()
+	{
+		String problem = question + " " + answer; //concatenates question and answer
+		return problem;
 	}
 }
