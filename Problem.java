@@ -23,17 +23,29 @@ public class Problem
 		return answer;
 	}
 	
-	
+	/**
+	 * Sets answer to the parameter answer
+	 * @param answer The new answer that the answer PIV is being set to
+	 */
 	public void setAnswer(int answer) 
 	{
 		this.answer = answer;
 	}
+	
+	/**
+	 * Returns the question part of the Problem
+	 * @return The question part of the Problem
+	 */
 	public String getQuestion() 
 	{
 		return question;
 	}
+	
+	/**
+	 * Sets question to the parameter question
+	 * @param question The new question that the question PIV is being set to
+	 */
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-	
 }
