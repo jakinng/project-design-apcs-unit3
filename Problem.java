@@ -9,11 +9,15 @@ public class Problem
 	int answer; //the answer to the problem 
 	String question; //the question in String form (e.g. "1 + 1 = ")
 	
+	public static void main(String[] args)
+	{
+	}
+	
 	/**
 	 * Constructs a problem with answer and question
 	 * @param answer The answer to the problem
 	 * @param question The question statement of the problem
- 	 */
+ 	 */
 	public Problem(int answer, String question)
 	{
 		this.answer = answer;
@@ -80,7 +84,7 @@ public class Problem
 	 */
 	public String toString()
 	{
-		String problem = question + " " + answer; //concatenates question and answer
-		return problem;
+		String problemString = question + " " + answer; //concatenates question and answer
+		return problemString;
 	}
 }
