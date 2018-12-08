@@ -65,12 +65,23 @@ public class Problem
 	 * @param problem
 	 * @return Whether the two problems are equivalent
 	 */
-	public boolean equals(Problem problem)
+	public boolean equals(Object problem)
 	{
-		// checks if answer and question are equal
-		if (answer == problem.getAnswer() && question.equals(problem.getQuestion()))
+		if (!(problem instanceof Problem))
 		{
-			return true;
+			return false;
+		}
+		// checks if answer and question are equal
+		else if (answer == ((Problem)problem).getAnswer())
+		{
+			if (question.equals(((Problem)problem).getQuestion()))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		else
 		{

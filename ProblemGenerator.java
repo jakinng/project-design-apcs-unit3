@@ -37,7 +37,8 @@ public class ProblemGenerator
 		System.out.println(jade == bruh);
 		System.out.println(bruh.equals(sys));
 		System.out.println(bruh == sys);
-	}
+		System.out.println(bruh.equals("hello"));
+	};
 	
 	/**
 	 * Generates a Problem based on level
