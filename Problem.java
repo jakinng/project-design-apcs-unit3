@@ -9,11 +9,15 @@ public class Problem
 	int answer; //the answer to the problem 
 	String question; //the question in String form (e.g. "1 + 1 = ")
 	
+	public static void main(String[] args)
+	{
+	}
+	
 	/**
 	 * Constructs a problem with answer and question
 	 * @param answer The answer to the problem
 	 * @param question The question statement of the problem
- 	 */
+ 	 */
 	public Problem(int answer, String question)
 	{
 		this.answer = answer;
@@ -61,15 +65,10 @@ public class Problem
 	 * @param problem
 	 * @return Whether the two problems are equivalent
 	 */
-	public boolean equals(Object problem)
+	public boolean equals(Problem problem)
 	{
-		//if the object isn't a problem it returns false
-		if (!(problem instanceof Problem))
-		{
-			return false;
-		}
-		// checks if answer and question are equal for the problems
-		else if (answer == ((Problem)problem).getAnswer() && question.equals(((Problem)problem).getQuestion()))
+		// checks if answer and question are equal
+		if (answer == problem.getAnswer() && question.equals(problem.getQuestion()))
 		{
 			return true;
 		}
@@ -79,18 +78,13 @@ public class Problem
 		}
 	}
 	
-	public int hashCode()
-	{
-		return 0;
-	}
-	
 	/**
 	 * Returns this Problem in String form: both the question and the answer
 	 * @return This Problem in String form
 	 */
 	public String toString()
 	{
-		String problem = question + " " + answer; //concatenates question and answer
-		return problem;
+		String problemString = question + " " + answer; //concatenates question and answer
+		return problemString;
 	}
 }

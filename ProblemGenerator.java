@@ -14,7 +14,24 @@ public class ProblemGenerator
 	
 	public static void main(String[] args)
 	{
-
+		Problem bruh = new Problem(3, "5 - 2");
+		Problem sys = new Problem(bruh.getAnswer(), bruh.getQuestion());
+		Problem jade = sys;
+		Problem lvl1 = generateProblem(1);
+		Problem lvl2 = generateProblem(2);
+		Problem lvl3 = generateProblem(3);
+		System.out.println(bruh);
+		System.out.println(sys);
+		System.out.println(jade);
+		System.out.println(lvl1);
+		System.out.println(lvl2);
+		System.out.println(lvl3);
+		System.out.println(jade.equals(sys));
+		System.out.println(jade == sys);
+		System.out.println(jade.equals(bruh));
+		System.out.println(jade == bruh);
+		System.out.println(bruh.equals(sys));
+		System.out.println(bruh == sys);
 	}
 	
 	/**
@@ -38,10 +55,11 @@ public class ProblemGenerator
 			num1 = random(LEVEL_1_MIN_NUM, LEVEL_1_MAX_NUM);
 			num2 = random(LEVEL_1_MIN_NUM, LEVEL_1_MAX_NUM); //generating random numbers
 			int sum = num1 + num2; 
-			while (sum >= LEVEL_1_MAX_SUM) //checking if the sum satisfies the conditions
+			while (sum > LEVEL_1_MAX_SUM) //checking if the sum satisfies the conditions
 			{
 				num1 = random(LEVEL_1_MIN_NUM, LEVEL_1_MAX_NUM);
 				num2 = random(LEVEL_1_MIN_NUM, LEVEL_1_MAX_NUM);
+				sum = num1 + num2;
 			}
 			//setting the problem's answer/question to what we want
 			generatedProblem.setAnswer(sum);
@@ -65,10 +83,11 @@ public class ProblemGenerator
 			//finding two random 1-digit integers and making num1 the larger
 			num1 = random(LEVEL_3_MIN_NUM, LEVEL_3_MAX_NUM);
 			num2 = random(LEVEL_3_MIN_NUM, LEVEL_3_MAX_NUM);
-			num1 = Math.max(num1, num2);
-			int difference = num1 - num2;
+			int bigger = Math.max(num1, num2);
+			int smaller = Math.min(num1, num2);
+			int difference = bigger - smaller;
 			generatedProblem.setAnswer(difference);
-			generatedProblem.setQuestion(Integer.toString(num1) + " - " + num2 + " =");
+			generatedProblem.setQuestion(Integer.toString(bigger) + " - " + smaller + " =");
 		}
 		return generatedProblem;
 	}
