@@ -1,7 +1,7 @@
 /**
- * Simulates a Player
- * @author Jakin Ng and Taerim Eom
- * @version 12.5.2018
+ * Simulates a Player of the Game
+ * @author Taerim Eom and Jakin Ng
+ * @version 12.8.2018
  */
 public class Player 
 {
@@ -9,6 +9,12 @@ public class Player
  	private int tries;
 	private int points;
 	
+	/**
+	 * Creates a Player
+	 * @param level The level at which the Player is
+	 * @param tries The number of tries the Player has used up
+	 * @param points The number of points for that level a Player has
+	 */
 	public Player(int level, int tries, int points)
 	{
 		this.level = level;
@@ -26,7 +32,7 @@ public class Player
 	}
 	
 	/**
-	 * sets the level of the user
+	 * Sets the level of the user
 	 * @param level The new level to be set 
 	 */
 	public void setLevel(int level)
@@ -36,7 +42,7 @@ public class Player
 	
 	/**
 	 * Returns the tries of the user
-	 * @return the tries of the user
+	 * @return The tries of the user
 	 */
 	public int getTries()
 	{
@@ -54,7 +60,7 @@ public class Player
 	
 	/**
 	 * Returns the points of the user
-	 * @return the points of the user
+	 * @return The points of the user
 	 */
 	public int getPoints()
 	{
