@@ -1,3 +1,8 @@
+/**
+ * Generates Problems
+ * @author Jakin Ng and Taerim Eom
+ * @version 12.5.2018
+ */
 public class ProblemGenerator 
 {
 	final static int LEVEL_1_MIN_NUM = 1; //setting constraints so they are one-digit integers
@@ -27,7 +32,7 @@ public class ProblemGenerator
 		System.out.println(lvl2);
 		System.out.println(lvl3);
 		System.out.println(jade.equals(sys));
-		System.out.println(jade == sys);
+		System.out.println(jade == sys); //lovetuori
 		System.out.println(jade.equals(bruh));
 		System.out.println(jade == bruh);
 		System.out.println(bruh.equals(sys));
@@ -35,10 +40,11 @@ public class ProblemGenerator
 	}
 	
 	/**
-	 * 
+	 * Generates a Problem based on level
 	 * Precondition: 1 <= level <= 3
-	 * @param level
-	 * @return
+	 * @param level The level of the problem to be generated
+	 * @return A Problem with question and answer satisfying the 
+	 * conditions of the level
 	 */
 	public static Problem generateProblem(int level)
 	{
