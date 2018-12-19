@@ -29,7 +29,7 @@ public class Game
 			player.setTries(TRIES);
 		}
 		//ends the game
-		System.out.print("Yes you won!!!");
+		System.out.print("You Have Completed The Game.");
 		sc.close();
 	}
 	
@@ -46,7 +46,7 @@ public class Game
 		//for the first try, gets the player's answer and performs the necessary actions
 		String playerAnswer = sc.nextLine();
 		testingAnswer(sc, player, problem, playerAnswer);
-		//uses the rest of the tries and performs necessary actions (could be cleaner?)
+		//uses the rest of the tries and performs necessary actions 
 		while (player.getTries() != TRIES && player.getTries() > 0)
 		{
 			System.out.println("Try again.");
@@ -84,7 +84,7 @@ public class Game
 		//otherwise it prompts them simply to enter an integer
 		catch (NumberFormatException ex)
 		{
-			System.out.println("Please enter an integer.");
+			System.out.println("You must enter an integer.");
 		}
 	}
 }
