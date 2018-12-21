@@ -1,3 +1,4 @@
+
 /**
  * Simulates a Player of the Game
  * @author Taerim Eom and Jakin Ng
@@ -74,5 +75,43 @@ public class Player
 	public void setPoints(int points)
 	{
 		this.points = points;
+	}
+	
+	/**
+	 * Returns the PIVs of Player in String form
+	 * @return The PIVs of Player in String form
+	 */
+	public String toString()
+	{
+		//outputs the PIVs
+		String playerString = "Level: " + level + "\nTries: " + tries
+			+ "\nPoints: " + points;
+		return playerString;
+	}
+	
+	/**
+	 * Performs the necessary actions when a correct answer is given
+	 */
+	public void correctAnswer()
+	{
+		points++;  //increases points
+		if (points == Game.LEVEL_THRESHOLD) //increments level if points is 5
+		{
+			level++;
+			//resets points for that level
+			points = 0;
+		}
+		//tries reset if answer is correct
+		tries = Game.TRIES;
+	}
+	
+	/**
+	 * Performs the necessary actions when a wrong answer is given
+	 */
+	public void wrongAnswer()
+	{
+		//decreases the number of tries they have left
+		tries--;
+		System.out.println("Wrong answer.");
 	}
 }
