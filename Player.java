@@ -1,4 +1,3 @@
-
 /**
  * Simulates a Player of the Game
  * @author Taerim Eom and Jakin Ng
@@ -94,12 +93,14 @@ public class Player
 	 */
 	public void correctAnswer()
 	{
+		System.out.print("Correct. ");
 		points++;  //increases points
 		if (points == Game.LEVEL_THRESHOLD) //increments level if points is 5
 		{
 			level++;
 			//resets points for that level
 			points = 0;
+			System.out.println("You have advanced a level.");
 		}
 		//tries reset if answer is correct
 		tries = Game.TRIES;
@@ -110,8 +111,8 @@ public class Player
 	 */
 	public void wrongAnswer()
 	{
+		System.out.print("Wrong answer. ");
 		//decreases the number of tries they have left
 		tries--;
-		System.out.println("Wrong answer.");
 	}
 }
