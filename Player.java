@@ -1,4 +1,3 @@
-
 /**
  * Simulates a Player of the Game
  * @author Taerim Eom and Jakin Ng
@@ -112,6 +111,5 @@ public class Player
 	{
 		//decreases the number of tries they have left
 		tries--;
-		System.out.println("Wrong answer.");
 	}
 }
