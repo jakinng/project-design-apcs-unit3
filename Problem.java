@@ -1,17 +1,12 @@
 /**
  * Simulates a Problem
  * @author Jakin Ng and Taerim Eom
- * @version 12.5.2018
+ * @version 12.05.2018
  */
-// ask Deppe about equals/toString
 public class Problem 
 {
 	int answer; //the answer to the problem 
 	String question; //the question in String form (e.g. "1 + 1 = ")
-	
-	public static void main(String[] args)
-	{
-	}
 	
 	/**
 	 * Constructs a problem with answer and question
@@ -72,16 +67,10 @@ public class Problem
 			return false;
 		}
 		// checks if answer and question are equal
-		else if (answer == ((Problem)problem).getAnswer())
+		else if (answer == ((Problem)problem).getAnswer() &&
+				question.equals(((Problem)problem).getQuestion()))
 		{
-			if (question.equals(((Problem)problem).getQuestion()))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return true;
 		}
 		else
 		{

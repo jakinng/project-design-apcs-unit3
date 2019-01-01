@@ -1,7 +1,7 @@
 /**
  * Generates Problems
  * @author Jakin Ng and Taerim Eom
- * @version 12.5.2018
+ * @version 12.05.2018
  */
 public class ProblemGenerator 
 {
@@ -12,33 +12,6 @@ public class ProblemGenerator
 	final static int LEVEL_2_MAX_NUM = 9;
 	final static int LEVEL_3_MIN_NUM = 1;
 	final static int LEVEL_3_MAX_NUM = 9;
-	// There are no PIVs as of now so if in the future there are still no PIVs we can maybe delete this idk
-	public ProblemGenerator()
-	{
-	}
-	
-	public static void main(String[] args)
-	{
-		Problem bruh = new Problem(3, "5 - 2");
-		Problem sys = new Problem(bruh.getAnswer(), bruh.getQuestion());
-		Problem jade = sys;
-		Problem lvl1 = generateProblem(1);
-		Problem lvl2 = generateProblem(2);
-		Problem lvl3 = generateProblem(3);
-		System.out.println(bruh);
-		System.out.println(sys);
-		System.out.println(jade);
-		System.out.println(lvl1);
-		System.out.println(lvl2);
-		System.out.println(lvl3);
-		System.out.println(jade.equals(sys));
-		System.out.println(jade == sys); //lovetuori
-		System.out.println(jade.equals(bruh));
-		System.out.println(jade == bruh);
-		System.out.println(bruh.equals(sys));
-		System.out.println(bruh == sys);
-		System.out.println(bruh.equals("hello"));
-	};
 	
 	/**
 	 * Generates a Problem based on level
